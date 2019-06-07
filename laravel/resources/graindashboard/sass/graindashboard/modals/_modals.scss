@@ -26,19 +26,19 @@
         left: auto;
         right: auto;
       }
-      .modal-nova & {
+      .modal-gd & {
         width: $modal-content;
       }
     }
   }
 
-  .modal-nova &-header {
-    padding: $modal-nova-header-padding;
+  .modal-gd &-header {
+    padding: $modal-gd-header-padding;
   }
-  .modal-nova &-body {
-    padding: $modal-nova-inner-padding;
+  .modal-gd &-body {
+    padding: $modal-gd-inner-padding;
   }
-  .modal-nova &-footer {
-    padding: $modal-nova-inner-padding;
+  .modal-gd &-footer {
+    padding: $modal-gd-inner-padding;
   }
 }

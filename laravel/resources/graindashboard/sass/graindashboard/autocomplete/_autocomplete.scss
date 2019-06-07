@@ -1,0 +1,39 @@
+//
+// Autocomplete
+//
+
+.ui-autocomplete {
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 0 4px 24px 0 rgba($black, .1);
+  border: 0 none;
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  }
+
+  .ui-menu-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+
+    &-wrapper {
+      display: block;
+      width: 100%;
+      border: none;
+      padding: .63rem 1rem;
+
+      &.ui-state-focus,
+      &.ui-state-active {
+        background-color: transparent;
+        color: $primary;
+        margin: 0;
+      }
+    }
+  }
+
+  &.ui-widget.ui-widget-content {
+    border: 0 none;
+  }
+}

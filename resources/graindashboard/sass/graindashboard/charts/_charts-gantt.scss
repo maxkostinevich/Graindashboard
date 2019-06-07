@@ -1,0 +1,95 @@
+/*------------------------------------
+  Charts Gantt
+------------------------------------*/
+
+.chart--gantt-simple {
+  .ganttview {
+    &,
+    &-hzheader,
+    &-hzheader-months,
+    &-grid-row,
+    &-hzheader-days,
+    &-vtheader-item,
+    &-block-container {
+      display: flex;
+    }
+
+    & {
+      border: none;
+    }
+
+    &-hzheader {
+      flex-direction: column;
+    }
+
+    &-hzheader-month,
+    &-hzheader-day,
+    &-vtheader,
+    &-vtheader-item-name,
+    &-vtheader-series,
+    &-grid,
+    &-grid-row-cell {
+      float: none;
+    }
+
+    &-slide-container {
+      position: relative;
+      border-color: $gray-200;
+    }
+
+    &-blocks {
+      position: absolute;
+      top: 0;
+    }
+
+    &-block {
+      border: none;
+      border-radius: .13rem;
+      padding-left: .5rem;
+    }
+
+    &-block-text {
+      color: $white;
+    }
+
+    &-hzheader-day,
+    &-grid-row-cell {
+      width: 1.38rem;
+    }
+
+    &-grid-row-cell,
+    &-block-container {
+      height: 3.75rem;
+    }
+
+    &-block-container,
+    &-vtheader-item {
+      align-items: center;
+      padding-top: 0;
+    }
+
+    &-hzheader-day {
+      font-size: .63rem;
+    }
+
+    &-vtheader-item-name,
+    &-hzheader-month,
+    &-hzheader-day {
+      border-color: $gray-200;
+    }
+  }
+}
+
+.chart--gantt-series-hide {
+  .ganttview-vtheader {
+    &-series {
+      display: none;
+    }
+
+    &-item-name {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

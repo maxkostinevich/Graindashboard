@@ -1,0 +1,53 @@
+/*------------------------------------
+	Switch
+------------------------------------*/
+.custom-switch {
+  padding-left: $custom-switch-width + $custom-control-gutter;
+
+  .custom-control-label {
+    &::before {
+      left: -($custom-switch-width + $custom-control-gutter);
+      width: $custom-switch-width;
+      height: $custom-switch-indicator-size + .25;
+      pointer-events: all;
+      border-radius: $custom-switch-indicator-border-radius;
+      box-shadow: none !important;
+      border-color: $hr-border-color;
+      cursor: pointer;
+    }
+
+    &::after {
+      top: calc(#{(($font-size-base * $line-height-base - $custom-control-indicator-size) / 2)} + #{$custom-control-indicator-border-width * 2});
+      left: calc(#{-($custom-switch-width + $custom-control-gutter)} + #{$custom-control-indicator-border-width * 2});
+      width: $custom-switch-indicator-size;
+      height: $custom-switch-indicator-size;
+      background-color: $primary;
+      border-radius: $custom-switch-indicator-border-radius;
+      @include transition(transform .15s ease-in-out, $custom-forms-transition);
+      cursor: pointer;
+    }
+  }
+
+  .custom-control-input:focus ~ .custom-control-label {
+    &::before {
+      border-color: $hr-border-color;
+    }
+  }
+
+  .custom-control-input:checked ~ .custom-control-label {
+    &::after {
+      background-color: $white;
+      border-color: $primary;
+      transform: translateX($custom-switch-width - $custom-control-indicator-size - .3);
+    }
+  }
+
+  .custom-control-input:disabled ~ .custom-control-label {
+    &::before {
+      background-color: $custom-control-indicator-disabled-bg;
+    }
+    &::after {
+      background-color: rgba($primary, .5);
+    }
+  }
+}

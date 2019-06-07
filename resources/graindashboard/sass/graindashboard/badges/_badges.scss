@@ -1,0 +1,127 @@
+/*------------------------------------
+	Badges
+------------------------------------*/
+
+.badge {
+  &-complex {
+    padding: $badge-complex-padding-y $badge-complex-padding-x $badge-complex-padding-y ($badge-complex-padding-x / 4);
+  }
+
+  // Badges Bordered Reverse
+  &-bordered-reverse {
+    border: $badge-reverse-border-width solid $white;
+  }
+
+
+  //
+  // Positions
+
+  &-top-left,
+  &-top-right,
+  &-bottom-left,
+  &-bottom-right,
+  &-center-left {
+    position: absolute !important;
+  }
+
+  // Top Left
+  &-top-left {
+    &.badge-outside.badge-sm {
+      top: $badge-outside-indent-sm;
+      left: $badge-outside-indent-sm;
+
+      [class*="btn-outline"] & {
+        top: $badge-outside-btn-indent-sm;
+        left: $badge-outside-btn-indent-sm;
+      }
+    }
+
+    &.badge-outside.badge-md {
+      top: $badge-outside-indent-md;
+      left: $badge-outside-indent-md;
+    }
+  }
+
+  // Top Right
+  &-top-right {
+    &.badge-outside.badge-sm {
+      top: $badge-outside-indent-sm;
+      right: $badge-outside-indent-sm;
+
+      [class*="btn-outline"] & {
+        top: $badge-outside-btn-indent-sm;
+        right: $badge-outside-btn-indent-sm;
+      }
+    }
+
+    &.badge-outside.badge-md {
+      top: $badge-outside-indent-md;
+      right: $badge-outside-indent-md;
+    }
+  }
+
+  // Bottom Left
+  &-bottom-left {
+    &.badge-outside.badge-sm {
+      bottom: $badge-outside-indent-sm;
+      left: $badge-outside-indent-sm;
+
+      [class*="btn-outline"] & {
+        bottom: $badge-outside-btn-indent-sm;
+        left: $badge-outside-btn-indent-sm;
+      }
+    }
+
+    &.badge-outside.badge-md {
+      bottom: $badge-outside-indent-md;
+      left: $badge-outside-indent-md;
+    }
+  }
+
+  // Bottom Right
+  &-bottom-right {
+    &.badge-outside.badge-sm {
+      bottom: $badge-outside-indent-sm;
+      right: $badge-outside-indent-sm;
+
+      [class*="btn-outline"] & {
+        bottom: $badge-outside-btn-indent-sm;
+        right: $badge-outside-btn-indent-sm;
+      }
+    }
+
+    &.badge-outside.badge-md {
+      bottom: $badge-outside-indent-md;
+      right: $badge-outside-indent-md;
+    }
+  }
+
+  //
+  // Sizes
+
+  &-sm,
+  &-md,
+  &-lg {
+    padding: 0;
+    text-align: center;
+  }
+
+  &-sm {
+    width: $badge-width-sm;
+    height: $badge-height-sm;
+    line-height: $badge-line-height-sm;
+    font-size: $badge-font-size-sm;
+  }
+
+  &-md {
+    width: $badge-width-md;
+    height: $badge-height-md;
+    line-height: $badge-line-height-md;
+  }
+
+  &-lg {
+    width: $badge-width-lg;
+    height: $badge-height-lg;
+    line-height: $badge-line-height-lg;
+  }
+}

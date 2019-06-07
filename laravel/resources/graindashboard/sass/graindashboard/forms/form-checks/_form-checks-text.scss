@@ -1,0 +1,20 @@
+/*------------------------------------
+	Checkboxes with Text
+------------------------------------*/
+.checkbox-text {
+  .text-unchecked {
+    display: inline-block;
+
+    input[type="checkbox"]:checked + & {
+      display: none;
+    }
+  }
+
+  .text-checked {
+    display: none;
+
+    input[type="checkbox"]:checked + & {
+      display: inline-block;
+    }
+  }
+}

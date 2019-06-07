@@ -1,0 +1,122 @@
+/*----------------------------------
+  Accordion
+------------------------------------*/
+
+.accordion {
+  // Bordered
+  &-bordered {
+    border: $accordion-border-width solid $border-color;
+  }
+
+  // Header Bottom Bordered
+  &-header-bordered-bottom {
+    margin-bottom: -$accordion-border-width;
+    border-bottom: $accordion-border-width solid $border-color;
+
+    .accordion-light & {
+      border-bottom-color: $border-color;
+    }
+
+    &[aria-expanded="true"] {
+      border-bottom-color: $border-color;
+    }
+
+    .accordion-icon {
+      margin-bottom: -$accordion-border-width;
+    }
+  }
+
+  // Bordered Top & Bottom
+  &-bordered-y {
+    border: {
+      width: $accordion-border-width 0;
+      style: solid;
+      color: $border-color;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  // Stacked
+  &-stacked + &-stacked {
+    margin-top: -1px;
+  }
+
+  // Header
+  &-header {
+    display: flex;
+    align-items: center;
+    padding: $accordion-padding;
+
+    @include media-breakpoint-up(md) {
+      padding: $accordion-padding-md;
+    }
+  }
+
+  // Body
+  &-body {
+    padding: 0 $accordion-padding $accordion-padding;
+
+    @include media-breakpoint-up(md) {
+      padding: 0 $accordion-padding-md $accordion-padding-md;
+    }
+  }
+
+  // Rounded
+  &-rounded {
+    border-radius: $border-radius * 2;
+    overflow: hidden;
+  }
+
+  &-stacked.accordion-rounded {
+    &:first-of-type {
+      border-radius: $border-radius $border-radius 0 0;
+    }
+
+    &:last-of-type {
+      border-radius: 0 0 $border-radius $border-radius;
+    }
+  }
+
+  // Shadow
+  &-active-shadow {
+    transition: all .2s ease-in;
+
+    &.active {
+      border-color: transparent;
+      box-shadow: 0 $border-radius .5rem 0 rgba($black, .1);
+    }
+  }
+
+  &-control {
+    transition: all .2s ease-in;
+
+    .accordion-header:not(.collapsed) & {
+      transform: rotate(-180deg);
+    }
+  }
+
+  // Icon
+  &-icon {
+    margin-top: -$accordion-border-width;
+
+    & > * {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &-lg {
+      width: $accordion-width-lg;
+      height: $accordion-height-lg;
+    }
+
+    &-md {
+      width: $accordion-width-sm;
+      height: $accordion-height-sm;
+    }
+  }
+}

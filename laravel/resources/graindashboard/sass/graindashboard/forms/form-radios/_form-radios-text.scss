@@ -1,0 +1,19 @@
+/*------------------------------------
+	Radios with Text
+------------------------------------*/
+
+.radio-text .text-unchecked {
+  display: inline-block;
+
+  input[type="radio"]:checked + & {
+    display: none;
+  }
+}
+
+.radio-text .text-checked {
+  display: none;
+
+  input[type="radio"]:checked + & {
+    display: inline-block;
+  }
+}

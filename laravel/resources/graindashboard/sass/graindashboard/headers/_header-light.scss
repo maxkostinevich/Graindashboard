@@ -1,0 +1,13 @@
+/*------------------------------------
+  Light Header
+------------------------------------*/
+
+.header {
+  &-light {
+    box-shadow: 0 0 8px 0 rgba($black, .05);
+
+    .navbar-brand-wrapper {
+      background-color: $body-bg;
+    }
+  }
+}

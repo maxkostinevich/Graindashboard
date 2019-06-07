@@ -1,0 +1,31 @@
+/*------------------------------------
+  Print styles
+------------------------------------*/
+
+@if $enable-print-styles {
+  @media print {
+    .datepicker,
+    .unfold-invoker,
+    .btn,
+    .shorten-moreellipses,
+    .shorten-morelink {
+      display: none !important;
+    }
+
+    .shorten-morecontent > span {
+      display: block !important;
+    }
+
+    .card-header .h6 {
+      font-size: $h4-font-size !important;
+    }
+
+    .badge {
+      border: $border-width solid inherit;
+    }
+
+    .mb-3 {
+      margin-bottom: 2.5rem !important;
+    }
+  }
+}

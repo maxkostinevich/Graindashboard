@@ -1,0 +1,23 @@
+/*------------------------------------
+  Tables
+------------------------------------*/
+
+// Table integrated to Card
+.card-table {
+  width: 100%;
+
+  th,
+  td {
+    padding-left: $grid-gutter-width/2;
+    padding-right: $grid-gutter-width/2;
+    border-bottom: $table-card-border-width solid $table-border-color;
+  }
+  th:first-child,
+  td:first-child {
+    padding-left: $table-card-cell-padding;
+  }
+  th:last-child,
+  td:last-child {
+    padding-right: $table-card-cell-padding;
+  }
+}

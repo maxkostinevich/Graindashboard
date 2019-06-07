@@ -1,0 +1,12 @@
+/*------------------------------------
+  Transitions
+------------------------------------*/
+
+.transition {
+  &n-opacity-0_1 {
+    transition: opacity .1s ease-in;
+  }
+  &n-color-0_15 {
+    transition: color .15s ease-in-out;
+  }
+}

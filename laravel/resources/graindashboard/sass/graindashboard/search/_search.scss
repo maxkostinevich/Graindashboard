@@ -1,0 +1,39 @@
+/*------------------------------------
+  Search
+------------------------------------*/
+
+.search {
+  select {
+    width: 100%;
+    margin-bottom: -1px;
+  }
+
+  .select2-container {
+    margin-bottom: -1px;
+  }
+
+  .form-control {
+    z-index: 2;
+  }
+
+  &-btn {
+    margin-left: -1px;
+  }
+
+  @include media-breakpoint-up(md) {
+    select {
+      width: 11.87rem;
+      margin-bottom: 0;
+    }
+
+    .select2-container {
+      height: 100%;
+      margin-bottom: 0;
+      margin-right: -1px;
+    }
+
+    .form-control {
+      z-index: 2;
+    }
+  }
+}

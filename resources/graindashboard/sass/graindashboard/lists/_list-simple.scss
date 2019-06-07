@@ -1,0 +1,24 @@
+/*------------------------------------
+  List Simple
+------------------------------------*/
+
+.list-simple {
+  padding-left: 0;
+  list-style-position: inside;
+
+  & li {
+    position: relative;
+    list-style: none;
+    padding-left: .75rem;
+
+    &::before {
+      content: "›";
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 0;
+      line-height: 1.2;
+      transform: translateY(-50%);
+    }
+  }
+}

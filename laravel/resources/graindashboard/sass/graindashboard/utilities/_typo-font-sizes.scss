@@ -1,0 +1,17 @@
+/*------------------------------------
+  Typography Font Size
+------------------------------------*/
+
+.font-size {
+  &-base {
+    font-size: $font-size-base !important;
+  }
+
+  &-inherit {
+    font-size: inherit !important;
+  }
+}
+
+.small {
+  font-size: $small-font-size !important;
+}

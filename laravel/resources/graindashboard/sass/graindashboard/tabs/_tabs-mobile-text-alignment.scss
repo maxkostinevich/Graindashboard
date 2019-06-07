@@ -1,0 +1,28 @@
+/*------------------------------------
+	Tabs Mobile Text Alignment
+------------------------------------*/
+
+.nav-mobile-mode-on {
+  .nav-mobile-text {
+    &-center .nav-mobile {
+      &-item,
+      &-link {
+        text-align: center;
+      }
+    }
+
+    &-left .nav-mobile {
+      &-item,
+      &-link {
+        text-align: left;
+      }
+    }
+
+    &-right .nav-mobile {
+      &-item,
+      &-link {
+        text-align: right;
+      }
+    }
+  }
+}

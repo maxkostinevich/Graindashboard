@@ -1,0 +1,46 @@
+/*------------------------------------
+	Select Bordered
+------------------------------------*/
+
+.select-bordered.select2-selection--single {
+  border: 1px solid $input-border-color;
+  border-radius: 0;
+
+  .select2-selection {
+    &__rendered {
+      line-height: 1.5;
+      font-size: 1rem;
+      padding: {
+        top: $input-btn-padding-y;
+        right: $input-btn-padding-x + 1.1;
+        bottom: $input-btn-padding-y;
+        left: $input-btn-padding-x;
+      }
+    }
+
+    &__arrow {
+      width: $custom-select-arrow-width;
+      height: 100%;
+
+      b {
+        display: flex;
+        width: auto;
+        height: auto;
+        font: $custom-select-indicator-font;
+        color: darken($input-border-color, 60%);
+        border: none;
+        margin-left: 0;
+        margin-top: 0;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  .select2-container--default & .select2-selection__placeholder {
+    color: $gray-500;
+  }
+
+  .select2-selection__arrow b::before {
+    content: "\e90d";
+  }
+}

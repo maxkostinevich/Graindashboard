@@ -1,0 +1,17 @@
+/*------------------------------------
+  Charts Timeline
+------------------------------------*/
+
+.chart--timeline {
+  .ytitle,
+  .axis {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    .ytitle,
+    .axis {
+      display: block;
+    }
+  }
+}

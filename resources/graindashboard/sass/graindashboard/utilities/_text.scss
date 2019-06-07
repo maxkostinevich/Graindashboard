@@ -1,0 +1,15 @@
+/*------------------------------------
+  Text
+------------------------------------*/
+
+.text-cut {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// Line Heights
+.lh-1 {
+  line-height: 1;
+}

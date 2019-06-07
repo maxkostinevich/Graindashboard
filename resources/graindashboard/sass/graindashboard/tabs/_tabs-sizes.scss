@@ -1,0 +1,14 @@
+/*------------------------------------
+	Tabs Sizes
+------------------------------------*/
+
+.nav {
+  &-sm .nav-item {
+    font-size: $nav-tabs-item-font-size-sm;
+  }
+
+  &-sm .nav-link {
+    padding: $nav-tabs-link-padding-y-sm $nav-tabs-link-padding-x-sm;
+    line-height: $nav-tabs-link-line-height-sm;
+  }
+}

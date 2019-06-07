@@ -1,0 +1,43 @@
+/*------------------------------------
+	Tooltips Custom
+------------------------------------*/
+
+.chartist-tooltip-custom {
+  position: absolute;
+  display: inline-block;
+  min-width: auto;
+  line-height: 1;
+  font-weight: normal;
+  font-family: $font-family-base;
+  background-color: $dark;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity .2s linear;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-top-color: #F4C63D;
+  }
+}
+
+.chart-tooltip--custom .chartist-tooltip {
+  &-title {
+    margin-bottom: 4px;
+  }
+
+  &-series-labels {
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

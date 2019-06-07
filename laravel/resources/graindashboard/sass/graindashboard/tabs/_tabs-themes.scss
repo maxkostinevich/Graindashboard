@@ -1,0 +1,28 @@
+/*------------------------------------
+	Tabs Themes
+------------------------------------*/
+
+.nav {
+  /* Primary */
+  &-primary .nav-link {
+    color: $gray-500;
+  }
+
+  &-primary.nav-pills .nav-link.active {
+    background-color: $primary;
+  }
+
+  &-primary.nav-v2 .nav-link.active {
+    color: $primary;
+  }
+
+  /* White */
+  &-white .nav-link {
+    color: $white;
+  }
+
+  &-white.nav-pills .nav-link.active {
+    color: $primary;
+    background-color: $white;
+  }
+}

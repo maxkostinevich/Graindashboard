@@ -1,0 +1,15 @@
+/*------------------------------------
+  Credit Card
+------------------------------------*/
+
+.credit-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 7rem;
+  background-color: $white;
+  @if $enable-rounded {
+    border-radius: .5rem;
+  }
+  padding: .875rem;
+}

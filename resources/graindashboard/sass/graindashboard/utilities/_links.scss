@@ -1,0 +1,44 @@
+/*------------------------------------
+	Links
+------------------------------------*/
+
+.link {
+  color: $primary;
+  transition: all .2s ease-in;
+
+  &:hover {
+    color: $primary-darker;
+    text-decoration: none;
+  }
+
+  &-dark {
+    color: $gray-500 !important;
+    transition: all .2s ease-in;
+
+    &:hover,
+    &.active,
+    &.selected {
+      color: $primary !important;
+    }
+  }
+
+  &-white {
+    color: $white !important;
+    transition: all .2s ease-in;
+
+    &:hover,
+    &.active,
+    &.selected {
+      color: rgba($white, .6) !important;
+    }
+  }
+
+  &-muted {
+    color: $gray-400 !important;
+    transition: all .2s ease-in;
+
+    &:hover {
+      color: $primary !important;
+    }
+  }
+}

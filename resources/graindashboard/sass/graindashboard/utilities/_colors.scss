@@ -1,0 +1,21 @@
+/*------------------------------------
+  Text Colors
+------------------------------------*/
+
+.text {
+  &-primary-darker {
+    color: $primary-darker !important;
+  }
+
+  &-main {
+    color: $gray-500 !important;
+  }
+
+  &-teal {
+    color: $teal !important;
+  }
+
+  &-twitter {
+    color: $twitter !important;
+  }
+}

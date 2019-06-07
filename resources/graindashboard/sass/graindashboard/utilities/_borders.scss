@@ -1,0 +1,93 @@
+/*------------------------------------
+  Borders & Border radius
+------------------------------------*/
+
+//
+// Border
+//
+
+.border {
+  @include media-breakpoint-up(md) {
+    &-md-left {
+      border-left: solid 1px $gray-200 !important;
+    }
+
+    &-md-top-0 {
+      border-top-width: 0 !important;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+    &-xl-bottom {
+      border-bottom: solid 1px $gray-200 !important;
+    }
+
+    &-xl-left {
+      border-left: solid 1px $gray-200 !important;
+    }
+
+    &-xl-top-0 {
+      border-top-width: 0 !important;
+    }
+
+    &-xl-bottom-0 {
+      border-bottom-width: 0 !important;
+    }
+  }
+}
+
+//
+// Border-radius
+//
+
+.rounded {
+  // Default Border Radius
+  &-top-0 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+  &-right-0 {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+  &-bottom-0 {
+    border-bottom-right-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+  &-left-0 {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+  }
+
+  // Border Radius Pill
+  &-pill {
+    @include border-radius($border-radius-pill);
+  }
+  &-top-pill {
+    @include border-top-radius($border-radius-pill);
+  }
+  &-right-pill {
+    @include border-right-radius($border-radius-pill);
+  }
+  &-bottom-pill {
+    @include border-bottom-radius($border-radius-pill);
+  }
+  &-left-pill {
+    @include border-left-radius($border-radius-pill);
+  }
+
+  // Custom options
+  &-bottom-left-pill {
+    @include border-bottom-left-radius($border-radius-pill);
+  }
+  &-top-left-pill {
+    @include border-top-left-radius($border-radius-pill);
+  }
+
+  // Pseudo options
+  &-pseudo-pill {
+    &::before,
+    &::after {
+      @include border-radius($border-radius-pill);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+/*------------------------------------
+  Dividers
+------------------------------------*/
+
+.divider {
+  border-top: $border-width solid $border-color;
+
+  &-sm {
+    width: $divider-width-sm;
+  }
+}

@@ -1,0 +1,25 @@
+/*------------------------------------
+	Alerts
+------------------------------------*/
+
+.alert {
+  & .close {
+    text-shadow: none;
+    opacity: .7;
+
+    &:not(:disabled):not(.disabled):hover {
+      color: inherit;
+      opacity: 1;
+    }
+  }
+
+  // Left Bordered
+  &-left-bordered {
+    border: 0;
+    border-left: 2px solid;
+
+    .close:hover {
+      color: rgba($gray-500, .5);
+    }
+  }
+}

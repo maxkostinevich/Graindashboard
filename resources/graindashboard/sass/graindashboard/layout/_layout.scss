@@ -1,0 +1,76 @@
+/*------------------------------------
+  Type
+------------------------------------*/
+
+body.has-sidebar {
+  position: relative;
+}
+
+.main {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: calc(100% - #{$header-height});
+  padding-left: 0;
+
+  body.side-nav-transition-on & {
+    transition: $main-transition;
+  }
+
+  body.has-fixed-sidebar-and-header & {
+    padding-top: $header-height;
+    min-height: 100%;
+  }
+}
+
+.content {
+  position: relative;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 100%;
+  transition: $content-transition;
+}
+
+@include media-breakpoint-up(lg) {
+  .main {
+    body.has-sidebar & {
+      padding-left: $sidebar-nav-width;
+    }
+
+    body.has-sidebar.side-nav-closed &,
+    body.has-sidebar.side-nav-minified & {
+      padding-left: $sidebar-nav-min-width;
+    }
+  }
+}
+
+.sidebar {
+  top: 0;
+  z-index: 99;
+  width: $sidebar-width;
+  max-width: 100%;
+
+  &-right {
+    right: 0;
+  }
+
+  &-light {
+    background-color: $sidebar-bg-color;
+    box-shadow: $sidebar-light-shadow;
+  }
+
+  &-full-height {
+    height: 100vh;
+  }
+
+  &-heading {
+    font-size: $sidebar-heading-font-size;
+    color: $sidebar-heading-color;
+    letter-spacing: $sidebar-heading-letter-spacing;
+    padding: $sidebar-heading-padding;
+    margin-bottom: 0;
+  }
+}

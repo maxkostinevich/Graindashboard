@@ -1,0 +1,66 @@
+/*------------------------------------
+	Cards
+------------------------------------*/
+
+.card {
+  @include media-breakpoint-up(md) {
+    &-body {
+      padding: $card-spacer-x-md;
+    }
+
+    &-title {
+      margin-bottom: $card-spacer-y-md;
+    }
+
+    &-subtitle {
+      margin-top: -($card-spacer-y-md / 2);
+    }
+
+    &-link {
+      & + & {
+        margin-left: $card-spacer-x-md;
+      }
+    }
+
+    &-header {
+      padding: $card-spacer-y-md $card-spacer-x-md;
+
+      &-tabs {
+        margin-right: -($card-spacer-x-md / 2);
+        margin-bottom: -$card-spacer-y-md;
+        margin-left: -($card-spacer-x-md / 2);
+      }
+
+      &-pills {
+        margin-right: -($card-spacer-x-md / 2);
+        margin-left: -($card-spacer-x-md / 2);
+      }
+    }
+
+    &-footer {
+      padding: $card-spacer-y-md $card-spacer-x-md;
+    }
+  }
+
+  .card-header {
+    &.bg-primary,
+    &.bg-dark {
+      color: $white;
+    }
+
+    &.bg-primary .unfold-invoker,
+    &.bg-dark .unfold-invoker {
+      color: $gray-300;
+    }
+  }
+
+  // Shadow on hover
+  &-shadow-hover {
+    transition: all .2s ease-in;
+
+    &:hover {
+      border-color: transparent !important;
+      box-shadow: 0 2px 8px 0 rgba($black, .1);
+    }
+  }
+}

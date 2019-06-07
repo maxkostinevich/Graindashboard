@@ -1,0 +1,63 @@
+/*------------------------------------
+	Form controls
+------------------------------------*/
+
+// Note!
+// !important is used as a temporary solution
+// to overwrite Bootstrap heritage classes.
+
+.form-control {
+  @if $enable-rounded {
+    border-radius: $border-radius !important;
+  }
+  &-onfocus-inherit:focus {
+    border-color: $input-border-color;
+  }
+}
+
+.input-group {
+  &-prepend,
+  &-append {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    transform: translateY(-50%);
+  }
+  &-prepend {
+    left: $input-padding-x;
+
+    &-simple {
+      position: static;
+      transform: translateY(0);
+    }
+  }
+  &-append {
+    right: $input-padding-x;
+
+    &-infinity {
+      right: 1px;
+      padding: {
+        left: 3rem;
+        right: .5rem;
+      }
+      background: {
+        image: linear-gradient(to right, rgba($white, .5) 10%, rgba($white, 1) 50%);
+        repeat: repeat-x;
+      }
+
+      .btn {
+        border-top-left-radius: $border-radius !important;
+        border-bottom-left-radius: $border-radius !important;
+      }
+    }
+
+    &-simple {
+      position: static;
+      transform: translateY(0);
+
+      .input-group-text {
+        border-color: $input-border-color;
+      }
+    }
+  }
+}

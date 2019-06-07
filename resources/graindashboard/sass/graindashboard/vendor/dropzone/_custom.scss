@@ -1,0 +1,26 @@
+.dropzone {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  border: 2px dashed $light;
+  background: white;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.dropzone-file-area {
+ }
+
+.dz-hidden-input {
+  left: 0; }
+
+.dz-message{
+  color: $light;
+}
+
+.dz-size{display: none;}
+.dropzone .dz-preview .dz-image img {
+  height: 100%;
+  width: auto;
+}

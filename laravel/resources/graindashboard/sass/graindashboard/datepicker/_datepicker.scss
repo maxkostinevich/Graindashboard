@@ -1,0 +1,269 @@
+/*------------------------------------
+  Datepicker
+------------------------------------*/
+
+.datepicker {
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  }
+
+
+  //
+  //  Rangepicker
+  //
+
+  &-rangepicker {
+    input {
+      box-sizing: border-box;
+      color: $gray-400;
+      background-color: transparent;
+      border: none;
+    }
+
+    .flatpickr-calendar {
+      top: 50px !important;
+      left: 0 !important;
+      right: auto !important;
+
+      &.rightMost {
+        left: auto !important;
+        right: 0 !important;
+      }
+    }
+  }
+
+
+
+  //
+  //  Datepicker Inline
+  //
+
+  &-inline {
+    .flatpickr-input {
+      display: none;
+    }
+
+    .dayContainer,
+    .flatpickr-weekdays,
+    .flatpickr-rContainer,
+    .flatpickr-days,
+    .flatpickr-calendar {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+    }
+
+    .flatpickr-day {
+      width: 14.2857143%;
+      min-width: 14.2857143%;
+      max-width: 14.2857143%;
+    }
+
+    .flatpickr-calendar {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .flatpickr-current-month {
+      top: 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: center;
+      height: 1.25rem;
+      padding-top: 0;
+      margin-left: 0;
+      margin-right: auto;
+
+      .numInputWrapper {
+        width: 5ch;
+      }
+
+      .numInputWrapper:hover {
+        background-color: transparent;
+      }
+    }
+
+    .numInputWrapper span {
+      border: 0;
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .flatpickr-current-month .numInputWrapper span {
+      &.arrowUp::after,
+      &.arrowDown::after {
+        left: auto;
+        right: 0;
+      }
+
+      &.arrowUp::after {
+        border: {
+          width: 0 3px 3px 3px;
+          style: solid;
+          color: transparent transparent $gray-500 transparent;
+        }
+      }
+
+      &.arrowDown::after {
+        border: {
+          width: 3px 3px 0 3px;
+          style: solid;
+          color: $gray-500 transparent transparent transparent;
+        }
+      }
+    }
+
+    .flatpickr-prev-month,
+    .flatpickr-next-month {
+      top: 50%;
+      display: flex !important;
+      height: auto;
+      padding: 0;
+      transform: translateY(-50%);
+    }
+
+    .flatpickr-prev-month {
+      left: 0;
+    }
+
+    .flatpickr-next-month {
+      right: 0;
+    }
+
+    span.flatpickr-weekday {
+      font: {
+        weight: 400;
+        size: .88rem;
+        family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+      }
+      color: $gray-500;
+    }
+
+    .flatpickr-month {
+      position: absolute;
+      bottom: 100%;
+      right: 0;
+      width: 10.63rem;
+      height: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .flatpickr-current-month {
+      span.cur-month,
+      input.cur-year {
+        font: {
+          weight: 400;
+          size: 1rem;
+          family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+        }
+        color: $gray-500;
+      }
+
+      span.cur-month {
+        margin-left: 0;
+      }
+
+      span.cur-month:hover {
+        background-color: transparent;
+      }
+    }
+
+    .flatpickr-day {
+      position: relative;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      font-size: 1rem;
+      color: $gray-500;
+      border: none;
+      border-radius: 0;
+
+      .badge {
+        top: -1px;
+        left: 50%;
+        margin-left: .69rem;
+      }
+
+      &.inRange,
+      &.prevMonthDay.inRange,
+      &.nextMonthDay.inRange,
+      &.today.inRange,
+      &.prevMonthDay.today.inRange,
+      &.nextMonthDay.today.inRange,
+      &:hover,
+      &.prevMonthDay:hover,
+      &.nextMonthDay:hover,
+      &:focus,
+      &.prevMonthDay:focus,
+      &.nextMonthDay:focus {
+        background-color: transparent;
+      }
+
+      &.prevMonthDay,
+      &.nextMonthDay {
+        color: $gray-300;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        display: block;
+        width: 2.19rem;
+        height: 2.19rem;
+        background-color: transparent;
+        @if $enable-rounded {
+          border-radius: 2px;
+        }
+        transform: translate(-50%, -50%);
+        transition: background-color .2s ease-in;
+      }
+
+      &.today,
+      &.selected {
+        color: $white;
+        background-color: transparent;
+        border-color: transparent;
+      }
+
+      &.selected {
+        color: $body-color;
+      }
+
+      &.today::before {
+        background-color: $primary;
+      }
+
+      &.selected::before {
+        background-color: rgba($primary, .1);
+      }
+
+      &.selected,
+      &.startRange,
+      &.endRange,
+      &.selected.inRange,
+      &.startRange.inRange,
+      &.endRange.inRange,
+      &.selected:focus,
+      &.startRange:focus,
+      &.endRange:focus,
+      &.selected:hover,
+      &.startRange:hover,
+      &.endRange:hover,
+      &.selected.prevMonthDay,
+      &.startRange.prevMonthDay,
+      &.endRange.prevMonthDay,
+      &.selected.nextMonthDay,
+      &.startRange.nextMonthDay,
+      &.endRange.nextMonthDay {
+        background: transparent;
+        border-color: transparent;
+      }
+    }
+  }
+}

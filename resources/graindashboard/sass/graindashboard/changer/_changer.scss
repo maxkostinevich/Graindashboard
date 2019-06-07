@@ -1,0 +1,20 @@
+/*------------------------------------
+  Changer
+------------------------------------*/
+
+.changer {
+  font-size: $changer-size;
+
+  &-elem {
+    position: relative;
+
+    &:first-child {
+      bottom: $changer-position-y;
+      right: $changer-position-x;
+    }
+    &:last-child {
+      top: $changer-position-y;
+      left: $changer-position-x;
+    }
+  }
+}

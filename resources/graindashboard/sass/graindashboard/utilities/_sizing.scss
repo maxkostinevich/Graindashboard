@@ -1,0 +1,44 @@
+/*------------------------------------
+  Width and height
+------------------------------------*/
+
+.w {
+  &-18_75rem {
+    width: 18.75rem !important;
+  }
+  @include media-breakpoint-up(md) {
+    &-md-auto {
+      width: auto;
+    }
+
+    &-md-8_13rem {
+      width: 8.13rem !important;
+    }
+
+    &-md-9_4rem {
+      width: 9.4rem !important;
+    }
+
+    &-md-22_5rem {
+      width: 22.5rem !important;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    &-xl-31_25rem {
+      width: 31.25rem !important;
+    }
+  }
+}
+
+.mh {
+  @include media-breakpoint-up(md) {
+    &-12_5 {
+      min-height: 12.5rem;
+    }
+
+    &-15_6 {
+      min-height: 15.6rem;
+    }
+  }
+}

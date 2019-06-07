@@ -1,0 +1,21 @@
+/*------------------------------------
+  List Stacked
+------------------------------------*/
+
+.list-stacked {
+  > * {
+    position: relative;
+
+    + * {
+      margin-left: -.63rem;
+    }
+  }
+
+  $m: 0;
+  @for $n from 1 through 20 {
+    > *:nth-child(#{$n}) {
+      z-index: (20 - $m);
+    }
+    $m: $m + 1;
+  }
+}

@@ -1,0 +1,29 @@
+/*------------------------------------
+  Input Group
+------------------------------------*/
+.input-group {
+  &-prepend ~ .form-control-icon-text {
+    padding-left: 2.5rem;
+  }
+  &-prepend ~ .form-control-icon-img {
+    padding-left: 3rem;
+  }
+
+  &-append ~ .form-control-icon-text {
+    padding-right: 2.5rem;
+  }
+  &-append ~ .form-control-icon-img {
+    padding-right: 3rem;
+  }
+
+  .icon-text {
+    width: $icon-text-width;
+    color: $text-muted;
+    cursor: pointer;
+  }
+
+  .icon-img {
+    width: $icon-img-sm;
+    height: $icon-img-sm;
+  }
+}

@@ -1,0 +1,58 @@
+/*------------------------------------
+	Tooltips Divided
+------------------------------------*/
+
+.ct-series foreignObject {
+  overflow: visible;
+}
+
+.chart-tooltip--divided {
+  top: 50% !important;
+  z-index: 3;
+  width: 1px;
+  min-width: auto;
+  background-color: transparent;
+  font-weight: normal;
+  padding: 0;
+  transform: translateY(-50%);
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    border: {
+      width: 0 0 0 1px;
+      style: solid;
+      color: rgba($dark, .3);
+    }
+    opacity: 1;
+    height: 100%;
+    margin-left: 0;
+    transform: translateX(-50%);
+  }
+
+  .chartist-tooltip {
+    &-value,
+    &-meta {
+      position: absolute;
+      left: 50%;
+      white-space: nowrap;
+      @if $enable-rounded {
+        border-radius: 2px;
+      }
+      padding: 1px .5rem;
+      transform: translateX(-50%);
+    }
+
+    &-value {
+      bottom: 100%;
+    }
+
+    &-meta {
+      top: 100%;
+    }
+  }
+}

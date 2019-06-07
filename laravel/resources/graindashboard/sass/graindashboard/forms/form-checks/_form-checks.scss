@@ -1,0 +1,28 @@
+/*------------------------------------
+	Checkboxes and Radio Buttons
+------------------------------------*/
+
+.checkbox::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  width: $custom-checkbox-width;
+  height: $custom-checkbox-height;
+  font: $custom-checkbox-font;
+  line-height: $custom-checkbox-line-height;
+  text-align: center;
+  border: 1px solid darken($input-border-color, 10%);
+  @if $enable-rounded {
+    border-radius: 2px;
+  }
+  transform: translateY(-50%);
+
+  input[type="checkbox"]:checked + & {
+    content: attr(data-icon);
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}

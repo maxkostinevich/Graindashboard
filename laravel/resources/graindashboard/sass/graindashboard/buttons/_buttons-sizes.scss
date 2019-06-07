@@ -1,0 +1,40 @@
+/*------------------------------------
+	Buttons Sizes
+------------------------------------*/
+// Min Width
+.btn {
+  &-width {
+    &-xs {
+      min-width: 6.25rem;
+    }
+
+    &-sm {
+      min-width: 7.5rem;
+      max-width: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+      &-xs {
+        min-width: 7.5rem;
+      }
+
+      &-sm {
+        min-width: 9.38rem;
+      }
+    }
+  }
+}
+
+/* Icons */
+.btn-icon {
+  &.btn-xs {
+    font-size: $font-size-xs;
+    width: $btn-width-xs;
+    height: $btn-height-xs;
+  }
+
+  &.btn-sm {
+    width: $btn-width-sm;
+    height: $btn-height-sm;
+  }
+}

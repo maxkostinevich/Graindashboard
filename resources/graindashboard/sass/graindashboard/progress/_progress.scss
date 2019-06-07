@@ -1,0 +1,67 @@
+/*------------------------------------
+	Progress
+------------------------------------*/
+
+.progress {
+  // Themes
+  &-light {
+    background-color: $primary-lighter;
+  }
+
+  &.rounded {
+    border-radius: ($progress-height / 2);
+
+    .progress-bar {
+      border-radius: ($progress-height / 2);
+    }
+  }
+
+  // Sizes
+  &-xs {
+    height: 1px;
+
+    &.rounded {
+      border-radius: 1px;
+
+      .progress-bar {
+        border-radius: 1px;
+      }
+    }
+  }
+
+  &-sm {
+    height: $progress-height-sm;
+
+    &.rounded {
+      border-radius: ($progress-height-sm / 2);
+
+      .progress-bar {
+        border-radius: ($progress-height-sm / 2);
+      }
+    }
+  }
+
+  &-lg {
+    height: $progress-height-lg;
+
+    &.rounded {
+      border-radius: ($progress-height-lg / 2);
+
+      .progress-bar {
+        border-radius: ($progress-height-lg / 2);
+      }
+    }
+  }
+
+  &-xl {
+    height: $progress-height-xl;
+
+    &.rounded {
+      border-radius: ($progress-height-xl / 2);
+
+      .progress-bar {
+        border-radius: ($progress-height-xl / 2);
+      }
+    }
+  }
+}

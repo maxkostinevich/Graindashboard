@@ -1,0 +1,19 @@
+/*------------------------------------
+  Charts
+------------------------------------*/
+
+svg.ct-chart {
+  &-bar,
+  &-donut,
+  &-line {
+    overflow: visible;
+  }
+
+  [data-is-tooltip-divided="true"] &-line {
+    overflow: hidden;
+
+    .IE11 & {
+      overflow: inherit;
+    }
+  }
+}

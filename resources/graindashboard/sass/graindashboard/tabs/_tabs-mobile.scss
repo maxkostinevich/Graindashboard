@@ -1,0 +1,60 @@
+/*------------------------------------
+	Tabs Mobile View
+------------------------------------*/
+
+.nav-mobile-mode-on {
+  &.nav-mobile-container {
+    position: relative;
+  }
+
+  .nav-mobile {
+    position: absolute;
+    top: 100%;
+    margin-top: $nav-tabs-mobile-margin-y;
+    background-color: $white;
+    white-space: nowrap;
+    z-index: 2;
+
+    &-item,
+    &-link {
+      display: block;
+      width: 100%;
+      font-weight: $nav-tabs-mobile-link-font-weight;
+      font-size: $nav-tabs-mobile-link-font-size;
+      color: $nav-tabs-mobile-link-color;
+      text-transform: none;
+      border: 0;
+      border-radius: 0;
+      margin: 0 !important;
+
+      &:hover {
+        color: $nav-tabs-mobile-link-color-hover;
+      }
+    }
+
+    &-item {
+      padding: 0;
+
+      .nav-mobile-link {
+        text-align: center;
+        padding: $nav-tabs-mobile-link-paddinx-y $nav-tabs-mobile-link-paddinx-x;
+
+        &::after {
+          display: none;
+        }
+
+        &:hover,
+        &.active {
+          background-color: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .nav-mobile {
+    display: none;
+  }
+}

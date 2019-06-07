@@ -1,0 +1,37 @@
+/*------------------------------------
+	Select Simple
+------------------------------------*/
+
+.select-simple.select2-selection--single {
+  border: 0;
+  border-radius: 0;
+  margin-top: -1px;
+
+  .select2-selection__rendered {
+    font-weight: 300;
+    font-size: 1rem;
+    padding-left: 0;
+    padding-right: 1.63rem;
+  }
+
+  .select2-selection__arrow b {
+    display: flex;
+    width: auto;
+    height: auto;
+    font: $custom-select-indicator-font;
+    color: darken($input-border-color, 60%);
+    border: none;
+    margin-left: 0;
+    margin-top: 0;
+    transform: translate(-50%, -50%);
+
+    &::before {
+      content: "\e90d";
+    }
+  }
+}
+
+.select2-container--open .select-dropdown-simple {
+  min-width: 9.4rem;
+  border: solid 1px $input-border-color;
+}

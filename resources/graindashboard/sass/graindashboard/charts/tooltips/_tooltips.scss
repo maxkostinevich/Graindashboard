@@ -1,0 +1,70 @@
+ /*------------------------------------
+	Tooltips
+------------------------------------*/
+
+.chart-tooltip {
+  min-width: auto;
+  line-height: 1;
+  font-weight: normal;
+  font-family: $font-family-base;
+  background-color: $dark;
+  z-index: 3;
+
+  &--none-triangle::before {
+    display: none;
+  }
+
+  &:not(&--none-triangle)::before {
+    margin-left: -7.5px;
+    border: {
+     style: solid;
+     width: 6px 7.5px 0 7.5px;
+     color: $dark transparent transparent transparent;
+    }
+  }
+
+  &.bg-white:not(&--none-triangle)::before {
+    border-color: $white transparent transparent transparent;
+  }
+
+  &.bg-primary:not(&--none-triangle)::before {
+    border-color: $primary transparent transparent transparent;
+  }
+
+  &.u-bg-primary-darker:not(&--none-triangle)::before {
+    border-color: $primary-darker transparent transparent transparent;
+  }
+
+  &--triangle-right:not(&--none-triangle)::before {
+    top: 50%;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: 0;
+    border: {
+      style: solid;
+      width: 6px 0 6px 6px;
+      color: transparent transparent transparent $dark;
+    }
+  }
+
+  &--triangle-right.bg-white:not(&--none-triangle)::before {
+    border-color: transparent transparent transparent $white;
+  }
+
+  &--sections-blocked {
+    .chartist-tooltip {
+      &-value,
+      &-meta {
+        display: block;
+      }
+
+      &-meta {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &--shadow-gray {
+    box-shadow: 0 4px 12px 0 rgba(90, 94, 118, .05);
+  }
+}

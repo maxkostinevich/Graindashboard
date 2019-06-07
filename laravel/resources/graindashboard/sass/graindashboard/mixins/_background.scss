@@ -1,0 +1,11 @@
+@mixin bg-soft($parent, $color) {
+  #{$parent} {
+    background-color: rgba($color, .1) !important;
+  }
+}
+
+@mixin bg-semi-soft($parent, $color) {
+  #{$parent} {
+    background-color: rgba($color, .5) !important;
+  }
+}

@@ -1,0 +1,128 @@
+/*------------------------------------
+	Indicators
+------------------------------------*/
+
+.indicator {
+  display: block;
+  width: $indicator-size;
+  height: $indicator-size;
+
+  //
+  // Colors
+  @each $color, $value in $theme-colors {
+    &-#{$color} {
+      @include indicator-variant($value);
+    }
+  }
+
+  //
+  // Sizes
+  &-sm {
+    width: $indicator-size-sm;
+    height: $indicator-size-sm;
+  }
+
+  &-lg {
+    width: $indicator-size-lg;
+    height: $indicator-size-lg;
+  }
+
+  //
+  // Bordered
+  &-bordered::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: $indicator-bordered-size;
+    height: $indicator-bordered-size;
+    background-color: $white;
+    margin: {
+      top: -$indicator-bordered-size / 2;
+      left: -$indicator-bordered-size / 2;
+    }
+  }
+
+  &-bordered.rounded-circle::after {
+    border-radius: 50%;
+  }
+
+  &-bordered-reverse {
+    border: $indicator-bordered-reverse-border-width solid $white;
+  }
+
+  //
+  // Positions
+  &-top-left,
+  &-top-right,
+  &-bottom-left,
+  &-bottom-right,
+  &-center-left {
+    position: absolute !important;
+  }
+
+  // Top Left
+  &-top-left {
+    top: $indicator-indent;
+    left: $indicator-indent;
+
+    &.indicator-outside {
+      top: $indicator-outside-indent;
+      left: $indicator-outside-indent;
+    }
+
+    [class*="btn-outline"] & {
+      top: $indicator-outside-btn-indent-sm;
+      left: $indicator-outside-btn-indent-sm;
+    }
+  }
+
+  // Top Right
+  &-top-right {
+    top: $indicator-indent;
+    right: $indicator-indent;
+
+    &.indicator-outside {
+      top: $indicator-outside-indent;
+      right: $indicator-outside-indent;
+    }
+
+    [class*="btn-outline"] & {
+      top: $indicator-outside-btn-indent-sm;
+      right: $indicator-outside-btn-indent-sm;
+    }
+  }
+
+  // Bottom Left
+  &-bottom-left {
+    bottom: $indicator-indent;
+    left: $indicator-indent;
+
+    &.indicator-outside {
+      bottom: $indicator-outside-indent;
+      left: $indicator-outside-indent;
+    }
+
+    [class*="btn-outline"] & {
+      bottom: $indicator-outside-btn-indent-sm;
+      left: $indicator-outside-btn-indent-sm;
+    }
+  }
+
+  // Bottom Right
+  &-bottom-right {
+    bottom: $indicator-indent;
+    right: $indicator-indent;
+
+    &.indicator-outside {
+      bottom: $indicator-outside-indent;
+      right: $indicator-outside-indent;
+    }
+
+    [class*="btn-outline"] & {
+      bottom: $indicator-outside-btn-indent-sm;
+      right: $indicator-outside-btn-indent-sm;
+    }
+  }
+}

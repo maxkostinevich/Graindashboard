@@ -1,0 +1,26 @@
+/*------------------------------------
+  List Group
+------------------------------------*/
+
+.list-group-item {
+  &-closer {
+    position: absolute;
+    top: .7rem;
+    right: 1.5rem;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+
+    .list-group-item:hover & {
+      opacity: 1;
+    }
+  }
+
+  &-date {
+    font-size: .88rem;
+    transition: opacity .2s ease-in;
+
+    .list-group-item:hover & {
+      opacity: 0;
+    }
+  }
+}

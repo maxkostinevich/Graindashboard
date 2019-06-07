@@ -1,0 +1,11 @@
+// Soft Colors
+@mixin button-soft($hs-color) {
+  color: $hs-color;
+  background-color: rgba($hs-color, .2);
+  border-color: transparent;
+
+  &:hover {
+    color: $white;
+    background-color: $hs-color;
+  }
+}

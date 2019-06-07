@@ -1,0 +1,26 @@
+/*------------------------------------
+	Radios Buttons
+------------------------------------*/
+
+.radio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: inline-block;
+  width: $custom-radio-width;
+  height: $custom-radio-height;
+  font: $custom-radio-font;
+  line-height: $custom-radio-line-height;
+  text-align: center;
+  border: 1px solid darken($input-border-color, 10%);
+  border-radius: 50%;
+  transform: translateY(-50%);
+
+  input[type="radio"]:checked + & {
+    content: attr(data-icon);
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+  }
+}

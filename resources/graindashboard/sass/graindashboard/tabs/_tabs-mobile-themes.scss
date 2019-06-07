@@ -1,0 +1,11 @@
+/*------------------------------------
+	Tabs Mobile View Themes
+------------------------------------*/
+
+.nav-mobile-mode-on {
+  .nav-mobile {
+    &-shade {
+      box-shadow: $nav-tabs-mobile-shadow;
+    }
+  }
+}

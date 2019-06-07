@@ -1,0 +1,57 @@
+/*------------------------------------
+	Buttons
+------------------------------------*/
+
+// Soft Colors
+@each $color, $value in $theme-colors {
+  .btn-soft-#{$color} {
+    @include button-soft($value);
+  }
+}
+
+// Social Network Colors
+@each $color, $value in $social-network-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+.btn {
+  &:not([disabled]):not(.disabled).focus,
+  &:not([disabled]):not(.disabled):focus {
+    box-shadow: none !important;
+  }
+}
+
+// White Color
+.btn-white {
+  background-color: $white;
+  color: $primary;
+
+  &:hover,
+  &:not([disabled]):not(.disabled).active,
+  &:not([disabled]):not(.disabled):active {
+    background-color: $primary;
+    border-color: $primary;
+    color: $white;
+  }
+}
+
+// Link
+.btn-link {
+  padding: 0;
+  font-weight: inherit;
+}
+
+/* Icon */
+.btn-icon {
+  position: relative;
+  line-height: 0;
+  width: $btn-width;
+  height: $btn-height;
+  padding: 0;
+
+  &-inner {
+    @include content-centered;
+  }
+}

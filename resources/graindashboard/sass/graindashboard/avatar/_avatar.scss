@@ -1,0 +1,39 @@
+/*------------------------------------
+	Avatar
+------------------------------------*/
+
+.avatar {
+  width: $avatar;
+  height: $avatar;
+
+  &-xs {
+    width: $avatar-xs;
+    height: $avatar-xs;
+  }
+
+  &-sm {
+    width: $avatar-sm;
+    height: $avatar-sm;
+  }
+
+  &-lg {
+    width: $avatar-lg;
+    height: $avatar-lg;
+  }
+
+  &-xl {
+    width: $avatar-xl;
+    height: $avatar-xl;
+  }
+}
+
+.avatar-placeholder{
+	height: $avatar;
+    width: $avatar;
+    font-size: 1.6rem;
+    font-weight: 600;
+	color: $primary;
+    background: rgba(229,229,229,0.5);
+	text-align:center;
+	display: inline-block;
+}

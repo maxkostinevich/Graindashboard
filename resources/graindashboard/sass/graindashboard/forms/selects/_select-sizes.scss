@@ -1,0 +1,17 @@
+/*------------------------------------
+	Select Sizes
+------------------------------------*/
+.select-lg.select2-selection--single .select2-selection {
+  &__rendered {
+    padding:{
+      top: $input-btn-padding-y-lg;
+      right: $input-btn-padding-x-lg + 1.1;
+      bottom: $input-btn-padding-y-lg;
+      left: $input-btn-padding-x-lg;
+    }
+  }
+
+  &__arrow b {
+    font-size: $custom-select-indicator-size-lg;
+  }
+}

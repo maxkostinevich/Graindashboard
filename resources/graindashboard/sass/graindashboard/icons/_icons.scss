@@ -1,0 +1,93 @@
+/*------------------------------------
+  Icons
+------------------------------------*/
+
+.icon {
+  width: $icon-width;
+  height: $icon-height;
+  padding: 0;
+  text-align: center;
+  line-height: $icon-line-height;
+
+
+  //
+  // Icon Sizes
+  //
+
+  &-xs {
+    width: $icon-width-xs;
+    height: $icon-height-xs;
+    line-height: $icon-line-height-xs;
+    font-size: $icon-font-size-xs;
+  }
+
+  &-sm {
+    width: $icon-width-sm;
+    height: $icon-height-sm;
+    line-height: $icon-line-height-sm;
+    font-size: $icon-font-size-sm;
+  }
+
+  &-lg {
+    width: $icon-width-lg;
+    height: $icon-height-lg;
+    line-height: $icon-line-height-lg;
+  }
+
+  //
+  // Text Icon Sizes
+  //
+
+ &-text {
+    font-size: $icon-text;
+
+    &-xs {
+      font-size: $icon-text-xs;
+    }
+
+    &-xsm {
+      font-size: $icon-text-xsm;
+    }
+
+    &-sm {
+      font-size: $icon-text-sm;
+    }
+
+    &-lg {
+      font-size: $icon-text-lg;
+    }
+
+    &-xl {
+      font-size: $icon-text-xl;
+    }
+
+    &-xxl {
+      font-size: $icon-text-xxl;
+    }
+  }
+
+
+  //
+  // Image Icon Sizes
+  //
+
+ &-img {
+    width: $icon-img;
+    height: $icon-img;
+
+    &-sm {
+      width: $icon-img-sm;
+      height: $icon-img-sm;
+    }
+
+    &-lg {
+      width: $icon-img-lg;
+      height: $icon-img-lg;
+    }
+
+    &-xl {
+      width: $icon-img-xl;
+      height: $icon-img-xl;
+    }
+  }
+}

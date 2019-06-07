@@ -1,0 +1,18 @@
+/*------------------------------------
+	List. Dot.
+------------------------------------*/
+
+.list-dot {
+  list-style: none;
+
+  &-item {
+    &::before {
+      content: "∙";
+      padding-right: .5rem;
+    }
+
+    &-not::before {
+      display: none;
+    }
+  }
+}

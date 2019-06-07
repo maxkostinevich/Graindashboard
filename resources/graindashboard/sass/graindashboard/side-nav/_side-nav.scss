@@ -1,0 +1,318 @@
+/*------------------------------------
+  Sidebar navigation
+------------------------------------*/
+
+// Sidebar navigation
+.side-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $sidebar-nav-width;
+  height: 100%;
+  padding: 0;
+  background-color: $sidebar-nav-bg-color;
+  visibility: hidden;
+  z-index: 100;
+
+  body.side-nav-transition-on & {
+    transition: $sidebar-nav-transition;
+  }
+
+  body.side-nav-mini-mode.side-nav-closed & {
+    width: $sidebar-nav-min-width;
+  }
+
+  body.side-nav-hidden:not(.side-nav-mini-mode) & {
+    left: -($sidebar-nav-width);
+  }
+
+  body.side-nav-hidden & {
+    left: -($sidebar-nav-min-width);
+  }
+
+  body.side-nav-initialized & {
+    visibility: visible;
+  }
+
+  body.has-fixed-sidebar-and-header & {
+    position: fixed;
+    top: $header-height;
+    height: calc(100% - #{$header-height});
+  }
+}
+
+// End sidebar navigation
+
+// Sidebar navigation header
+.side-nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: $header-header-height;
+  background-color: $primary;
+  padding: {
+    left: $header-header-padding-x;
+    right: $header-header-padding-x;
+  }
+
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: $header-header-logo-icon-margin-x;
+    }
+
+    &-text {
+      opacity: 1;
+      transition: $header-header-logo-text-transition;
+
+      body.side-nav-mini-mode.side-nav-closed & {
+        opacity: 0;
+      }
+    }
+  }
+
+  &-close {
+    color: $header-header-close-color;
+
+    &:hover {
+      color: $header-header-close-color-hover;
+    }
+  }
+
+  .side-nav-min-width-mode & {
+    display: none;
+  }
+}
+
+// End sidebar navigation header
+
+// Sidebar navigation menu
+.side-nav-menu {
+  list-style: none;
+
+  &-item {
+    position: relative;
+    font-size: $sidebar-nav-item;
+
+    &.active {
+      /*background-color: $darker;*/
+    }
+
+    .side-nav-menu-third-level & {
+      padding-left: $sidebar-nav-3d-level-item-indent;
+    }
+  }
+
+  &-link {
+    display: flex;
+    color: $sidebar-nav-link-color;
+    white-space: nowrap;
+    text-decoration: none;
+    overflow: hidden;
+    padding: $sidebar-nav-link-paddding-y $sidebar-nav-link-paddding-x;
+
+    &::before {
+      .side-nav-menu-third-level & {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: .31rem;
+        display: block;
+        width: .5rem;
+        height: 0;
+        border-top: 1px solid $white;
+        transform: translateY(-50%);
+      }
+    }
+
+    [class*="badge"] {
+      opacity: 0;
+      transition: opacity .2s ease-in;
+    }
+
+    &:hover,
+    &.active,
+    .side-nav-menu-item.active > & {
+      text-decoration: none;
+      color: $primary;
+
+      &::before {
+        .side-nav-menu-third-level &,
+        .side-nav-menu-third-level & {
+          border-color: $primary;
+        }
+      }
+    }
+
+    .side-nav-menu-top-level > .side-nav-opened > &,
+    .side-nav-menu-second-level > .side-nav-opened > & {
+      color: $primary;
+    }
+
+    .side-nav-menu-second-level & {
+      text-decoration: none;
+    }
+
+    .side-nav-menu-third-level & {
+      position: relative;
+    }
+  }
+
+  &-icon {
+    font-size: $sidebar-nav-icon-font-size;
+    color: $sidebar-nav-icon-color;
+
+    .side-nav-menu-link:hover &,
+    .side-nav-menu-item.active &,
+    .side-nav-menu-top-level > .side-nav-opened > .side-nav-menu-link &,
+    .side-nav-menu-second-level > .side-nav-opened > .side-nav-menu-link & {
+      color: $sidebar-nav-icon-color-hover;
+    }
+  }
+
+  &-top-level {
+    padding-left: 0;
+
+    > .side-nav-opened {
+      /*background-color: $darker;*/
+    }
+  }
+
+  &-second-level {
+    padding-left: $sidebar-nav-2d-level-indent;
+  }
+
+  &-third-level {
+    padding-left: $sidebar-nav-3d-level-indent;
+  }
+}
+
+.side-nav-control {
+  &-icon {
+    font-size: $sidebar-nav-control-icon-font-size;
+    color: $sidebar-nav-control-icon-color;
+    transition: $sidebar-nav-control-icon-transition;
+
+    .side-nav-opened > a & {
+      transform: rotate(90deg);
+    }
+
+    .side-nav-menu-second-level .side-nav-menu-link & {
+      transition: $sidebar-nav-control-icon-transition;
+    }
+  }
+}
+
+.side-nav-has-menu {
+  background-color: transparent;
+  transition: background-color .2s ease-in;
+  overflow: hidden;
+
+  > ul {
+    display: none;
+
+    .side-nav-has-menu.side-nav-opened > & {
+      display: block;
+    }
+  }
+}
+
+// End sidebar navigation menu
+
+// Fadein / fadeout
+.side-nav-fadein-on-closed {
+  opacity: 0;
+  transition: opacity .4s ease-in;
+
+  body.side-nav-full-mode.side-nav-hidden &,
+  body.side-nav-mini-mode.side-nav-closed & {
+    opacity: 1;
+  }
+}
+
+.side-nav-fadeout-on-closed {
+  opacity: 1;
+  transition: opacity .4s ease-in;
+
+  body.side-nav-full-mode.side-nav-hidden &,
+  body.side-nav-mini-mode.side-nav-closed & {
+    opacity: 0;
+  }
+}
+
+// End fadein / fadeout
+
+// Show / hide
+.side-nav-show-on-closed {
+  display: none;
+
+  .side-nav-closed & {
+    display: flex;
+  }
+}
+
+.side-nav-hide-on-closed {
+  display: flex;
+
+  .side-nav-closed & {
+    display: none;
+  }
+}
+
+// End show / hide
+
+// Sidebar navigation
+@include media-breakpoint-up(lg) {
+  .side-nav {
+    left: 0;
+    z-index: 99;
+    visibility: visible;
+
+    body.side-nav-transition-on & {
+      transition: width .3s ease-in, left .2s ease-in;
+    }
+
+    body.side-nav-closed & {
+      left: 0;
+    }
+
+    body.side-nav-closed & {
+      width: $sidebar-nav-min-width;
+    }
+  }
+
+  // End sidebar navigation
+
+  // Sidebar navigation header
+  .side-nav-header {
+    display: none;
+  }
+
+  // End sidebar navigation header
+
+  // Fadeout
+  .side-nav-fadeout-on-closed {
+    body.side-nav-full-mode.side-nav-closed & {
+      opacity: 0;
+    }
+  }
+
+  // End fadeout
+
+  // Hide/show
+  .side-nav-show-on-closed {
+    body.side-nav-full-mode.side-nav-closed & {
+      display: flex;
+    }
+  }
+
+  .side-nav-hide-on-closed {
+    body.side-nav-full-mode.side-nav-closed & {
+      display: none;
+    }
+  }
+
+  // End hide/show
+}

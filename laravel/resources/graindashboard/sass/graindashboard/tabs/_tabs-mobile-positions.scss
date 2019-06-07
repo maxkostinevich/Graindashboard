@@ -1,0 +1,20 @@
+/*------------------------------------
+	Tabs Mobile View Positions
+------------------------------------*/
+
+.nav-mobile-mode-on {
+  .nav-mobile {
+    &-center {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-left {
+      left: 0;
+    }
+
+    &-right {
+      right: 0;
+    }
+  }
+}

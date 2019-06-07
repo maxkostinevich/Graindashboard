@@ -1,0 +1,63 @@
+/*------------------------------------
+  Flatpickr
+------------------------------------*/
+
+.flatpickr-day {
+  &.inRange,
+  &.prevMonthDay.inRange,
+  &.nextMonthDay.inRange,
+  &.today.inRange,
+  &.prevMonthDay.today.inRange,
+  &.nextMonthDay.today.inRange,
+  &:hover,
+  &.prevMonthDay:hover,
+  &.nextMonthDay:hover,
+  &:focus,
+  &.prevMonthDay:focus,
+  &.nextMonthDay:focus {
+    background: lighten($primary-lighter, 3%);
+    border-color: lighten($primary-lighter, 3%);
+  }
+
+  &.inRange {
+    box-shadow: -5px 0 0 lighten($primary-lighter, 3%), 5px 0 0 lighten($primary-lighter, 3%);
+  }
+
+  &.selected,
+  &.startRange,
+  &.endRange,
+  &.selected.inRange,
+  &.startRange.inRange,
+  &.endRange.inRange,
+  &.selected:focus,
+  &.startRange:focus,
+  &.endRange:focus,
+  &.selected:hover,
+  &.startRange:hover,
+  &.endRange:hover,
+  &.selected.prevMonthDay,
+  &.startRange.prevMonthDay,
+  &.endRange.prevMonthDay,
+  &.selected.nextMonthDay,
+  &.startRange.nextMonthDay,
+  &.endRange.nextMonthDay {
+    background: $primary;
+    border-color: $primary;
+  }
+}
+
+.flatpickr-day.selected.startRange + .endRange,
+.flatpickr-day.startRange.startRange + .endRange,
+.flatpickr-day.endRange.startRange + .endRange {
+  box-shadow: -10px 0 0 $primary;
+}
+
+.flatpickr-month {
+  padding: 10px 0;
+  height: 50px;
+}
+
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  padding-top: 20px;
+}

@@ -1,0 +1,71 @@
+/*------------------------------------
+	Tabs Designs
+------------------------------------*/
+
+// Tab v.2
+.nav-v2 {
+  .nav-link {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      border-bottom: $nav2-tabs-border-width solid transparent;
+      z-index: 2;
+    }
+
+    &.active {
+      background-color: transparent;
+      color: $primary;
+
+      &::after {
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    border: none;
+
+    .nav-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// Nav Pills v.2
+.nav-pills-v2 {
+  .nav-item {
+    margin-right: $nav-tabs-pills2-item-maxrgin-x;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .nav-link {
+    @if $enable-rounded {
+      border-radius: $nav-tabs-pills2-border-radius;
+    }
+    padding: $nav-tabs-pills2-padding-y $nav-tabs-pills2-padding-x;
+    border: solid $nav-tabs-pills2-border-width $nav-tabs-pills2-border-color;
+    transition: $nav-tabs-pills2-link-transition;
+
+    &.active {
+      background-color: $primary;
+      border-color: $primary;
+
+      &:hover {
+        background-color: rgba($primary, .6);
+        border-color: rgba($primary, .6);
+      }
+    }
+  }
+}

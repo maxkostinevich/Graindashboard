@@ -1,0 +1,47 @@
+/*------------------------------------
+	Tooltips Themes
+------------------------------------*/
+
+.chart-tooltip {
+  &.bg-white:not(&--none-triangle)::before {
+    border-color: $white transparent transparent transparent;
+  }
+
+  &.bg-primary:not(&--none-triangle)::before {
+    border-color: $primary transparent transparent transparent;
+  }
+
+  &.bg-primary-darker:not(&--none-triangle)::before {
+    border-color: $primary-darker transparent transparent transparent;
+  }
+
+  &__value--bg-black .chartist-tooltip-value {
+    background-color: $black;
+  }
+
+  &__meta {
+    &--bg-primary .chartist-tooltip-meta {
+      background-color: $primary;
+    }
+
+    &--text-semi-light .chartist-tooltip-meta {
+      color: $gray-300;
+    }
+
+    &--text-info .chartist-tooltip-meta {
+      color: $info;
+    }
+
+    &--text-primary .chartist-tooltip-meta {
+      color: $primary;
+    }
+
+    &--text-warning .chartist-tooltip-meta {
+      color: $warning;
+    }
+
+    &--text-semi-darker .chartist-tooltip-meta {
+      color: $gray-400;
+    }
+  }
+}

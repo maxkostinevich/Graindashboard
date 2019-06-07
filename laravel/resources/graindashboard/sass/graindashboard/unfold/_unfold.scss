@@ -1,0 +1,144 @@
+/*------------------------------------
+	Unfold
+------------------------------------*/
+
+.unfold {
+  display: none;
+  max-width: $unfold-max-width;
+  padding-left: 0;
+  z-index: 5;
+  @if $enable-rounded {
+    border-radius: $border-radius;
+  }
+
+  &-invoker {
+    font-size: $unfold-invoker-font-size;
+    color: $unfold-invoker-color;
+
+    &-text {
+      font-size: $unfold-invoker-text-font-size;
+      color: $unfold-invoker-text-color;
+    }
+
+    &-text.active,
+    &-text:hover,
+    &.active,
+    &:hover {
+      color: $unfold-invoker-color-hover;
+      text-decoration: none;
+    }
+  }
+
+  // Positions
+  &-top {
+    top: 100%;
+  }
+
+  &-bottom {
+    bottom: 100%;
+  }
+
+  &-centered {
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media-breakpoint-down(sm) {
+      & {
+        transform: translateX(-60%);
+      }
+
+      .header-search & {
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &-left {
+    left: 0;
+  }
+
+  &-right {
+    right: 0;
+  }
+
+  // Style
+  &-light {
+    background-color: $unfold-light-background;
+    box-shadow: $unfold-light-shadow;
+  }
+
+  &-user {
+    min-width: $unfold-user-min-width;
+  }
+
+  &-item {
+    list-style: none;
+    font-size: $unfold-item-font-size;
+    margin-bottom: 0;
+
+    &-has-divider {
+      margin-top: $unfold-divider;
+      border-top: $unfold-divider-border-width solid;
+
+      .unfold-link {
+        padding: {
+          top: $unfold-has-divider-link-padding-y;
+          bottom: $unfold-has-divider-link-padding-y;
+        }
+      }
+    }
+  }
+
+  &-link {
+    padding: $unfold-link-padding-y $unfold-link-padding-x;
+    transition: $unfold-link-transition;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &-light &-link {
+    color: $unfold-light-link-color;
+
+    &:hover {
+      color: $unfold-light-link-color-hover;
+    }
+  }
+
+  &-light &-item-has-divider {
+    border-color: $unfold-light-divider-border-color;
+  }
+
+  &-item-icon {
+    font-size: $unfold-icon-font-size;
+    color: $unfold-icon-color !important;
+    transition: $unfold-icon-transition;
+  }
+
+  &-light &-link:hover &-item-icon {
+    color: inherit;
+  }
+
+  // CSS Animation
+  &-css-animation {
+    display: block;
+    animation-duration: 1s;
+
+    &.unfold-hidden {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+
+  // jQuery Slide
+  &-jquery-slide.unfold-hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  @media (min-width: 375px) {
+    max-width: none;
+  }
+}

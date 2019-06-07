@@ -1,0 +1,87 @@
+/*------------------------------------
+  Default Styles
+------------------------------------*/
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga", "kern";
+  text-rendering: optimizelegibility;
+  background-color: $body-bg;
+  overflow-x: hidden;
+}
+
+main {
+  position: relative;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  > a {
+    color: $headings-link-color;
+
+    &:hover {
+      color: $link-color-hover;
+    }
+  }
+
+  &.text-white > a {
+    color: $headings-white-link-color;
+  }
+}
+
+h4, h5, h6,
+.h4, .h5, .h6 {
+  font-weight: $font-weight-medium;
+}
+
+.blockquote {
+  & p {
+    font-size: $blockquote-font-size;
+    line-height: $blockquote-line-height;
+  }
+
+  &-footer {
+    color: $gray-500;
+
+    &::before {
+      margin-right: $blockquote-dash-right-margin;
+    }
+  }
+}
+
+svg {
+  margin-bottom: $svg-negative-margin-bottom;
+}
+
+figure {
+  margin-bottom: 0;
+}
+
+/*------------------------------------
+  Highlight Color
+------------------------------------*/
+
+::-moz-selection {
+  color: $white;
+  background-color: $primary;
+}
+
+::selection {
+  color: $white;
+  background-color: $primary;
+}
+
+.bg-primary ::-moz-selection {
+  color: $primary;
+  background-color: $white;
+}
+
+.bg-primary ::selection {
+  color: $primary;
+  background-color: $white;
+}

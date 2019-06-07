@@ -1,0 +1,32 @@
+/*------------------------------------
+  Backgrounds
+------------------------------------*/
+
+.bg {
+  &-body{
+    background-color: $body-bg !important;
+  }
+
+  &-semi-darker {
+    background-color: $gray-400 !important;
+  }
+
+  &-semi-lighter {
+    background-color: $gray-200 !important;
+  }
+
+  &-dark-v1 {
+    background-color: $sidebar-nav-bg-color !important;
+  }
+
+  &-dark-v2 {
+    background-color: $gray-500 !important;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  @include bg-soft(".bg-soft-#{$color}", $value);
+}
+@each $color, $value in $theme-colors {
+  @include bg-semi-soft(".bg-semi-soft-#{$color}", $value);
+}

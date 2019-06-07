@@ -1,0 +1,55 @@
+/*------------------------------------
+  Charts Axis X Customization
+------------------------------------*/
+
+.chart {
+  &--axis-x {
+    &--nowrap .ct-label.ct-horizontal.ct-end {
+      white-space: nowrap;
+    }
+
+    &.chart--labels-with-helper .ct-label.ct-horizontal {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        display: block;
+        width: 0;
+        height: .63rem;
+        border-left: 1px solid $gray-200;
+      }
+
+      &:not(.first):not(.last) {
+        transform: translateX(-50%);
+
+        &::before {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      &.first {
+        justify-content: flex-start !important;
+
+        &::before {
+          left: 0;
+        }
+      }
+
+      &.last {
+        transform: translateX(-100%);
+        justify-content: flex-end !important;
+
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &--hide-empty-labels .ct-label.ct-horizontal.ct-end:not(&__label--visible) {
+    display: none;
+  }
+}

@@ -21,4 +21,4 @@ npm run production
 ```
 
 ## Commercial License
-(c) 2019  [DigitalWheat](https://digitalwheat.com) - All rights reserved.
+(c) 2019  [Graindashboard](https://Graindashboard.com) - All rights reserved.

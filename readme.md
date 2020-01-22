@@ -20,5 +20,5 @@ npm run dev
 npm run production
 ```
 
-## Commercial License
-(c) 2019  [Graindashboard](https://Graindashboard.com) - All rights reserved.
+## MIT License
+(c) 2020 Created by [Max Kostinevich](https://maxkostinevich.com) - All rights reserved.

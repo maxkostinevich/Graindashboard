@@ -5,6 +5,8 @@ Compatible with Laravel Framework.
 
 Online demo: [demo.graindashboard.com](https://demo.graindashboard.com)
 
+![](https://user-images.githubusercontent.com/10295466/72931623-45353300-3d6f-11ea-8658-e4e227279723.jpg)
+
 ## Development
 Graindashboard uses [Laravel Mix](https://github.com/JeffreyWay/laravel-mix)  as a build tool.
 ### Installation

@@ -17,7 +17,7 @@
   "devDependencies": {
     "animate.css": "^3.7.0",
     "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "jquery-migrate": "^3.0.1",
     "jquery-validation": "^1.17.0",
     "webpack-jquery-ui": "^2.0.1",
